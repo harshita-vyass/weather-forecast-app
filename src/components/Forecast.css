@@ -1,0 +1,171 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+  }
+  body {
+    background-color: #3f5c75;
+    min-height: 100vh;
+  }
+  .header {
+    background-color: #163f61;
+    min-height: 4rem;
+  }
+  
+  .icon {
+    float: left;
+    padding-left: 2rem;
+    margin-top: 0.9rem;
+  }
+
+  .heading {
+    float: left;
+  }
+  
+  h1 {
+    font-size: 2.1rem;
+    font-weight: bolder;
+    padding-left: 0.6rem;
+    margin-top: 0.8rem;
+    color: white;
+    letter-spacing: 2px;
+  }
+  
+  .search {
+    float: right;
+    padding: 0.3rem 2rem;
+    margin-top: 0.9rem;
+    margin-right: 1rem;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    color: black;
+  }
+  
+  .button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 0.9rem;
+    margin-right: 3rem;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    background-color: #0b1d2b;
+    color: white;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-width: 50%;
+    flex-wrap: wrap;
+  }
+  .temperature {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .temperature h2 {
+    font-size: 2rem;
+  }
+  
+  .temperature h1 {
+    font-size: 5rem;
+  }
+  
+  .temperature p {
+    font-size: large;
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: auto;
+    align-items: center;
+    font-size: larger;
+    align-items: flex-start;
+  }
+
+  .details > h1 {
+    padding: 0;
+    text-decoration: underline;
+  }
+  
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+    margin: 1rem;
+    float: right;
+  }
+  
+  .card {
+    width: 20rem;
+    height: 15rem;
+    background-color: #163f61;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  
+  .card p {
+    display: flex;
+    gap: 0.2rem;
+    justify-content: center;
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 1rem;
+  }
+  
+  .card h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 2rem 0 1rem 0;
+  }
+  
+  .container { 
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin: 2rem;
+    justify-content: space-evenly;
+    
+  }
+
+  .defaultMsg {
+    text-align: center;
+    margin: 40vh auto;
+  }
+
+  @media screen and (max-width: 602px) {
+    .header h1 {
+      display: none;
+      visibility: hidden;
+    }
+
+    .main {
+      gap: 2rem;
+    }
+
+    .card {
+      min-width: 70vw;
+    }
+
+    .details > h1 { 
+      display: none;
+    }
+  }
