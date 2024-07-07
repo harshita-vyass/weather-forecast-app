@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import ForecastAdditionalDetails from "./ForecastAdditionalDetails";
 import ThreeDayForecast from "../components/ThreeDayForecast";
 import ForecastDetails from "../components/ForecastDetails";
+import { fetchWeather } from "../api";
 
 const Forecast = () => {
   const [city, setCity] = useState("");
@@ -17,35 +18,13 @@ const Forecast = () => {
         return;
     }
     console.info("Saved " + city);
-    fetchWeather(city);
+    const response = await fetchWeather(city);
+    saveData(response)
   };
 
   const saveData = (response) => {
     setIsDataAvailable(true);
     setWeatherData(response);
-  };
-
-  const fetchWeather = async (cityName) => {
-    const city = cityName;
-    console.log(city);
-
-    const url = `https://weatherapi-com.p.rapidapi.com/forecast.json?q=${city}&days=3`;
-    const options = {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": "73479c8263msh7151a96153185e9p1788aajsn1d611c727f5c",
-        "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com",
-      },
-    };
-
-    try {
-      const response = await fetch(url, options);
-      const data = await response.json();
-      console.log(data);
-      saveData(data);
-    } catch (err) {
-      console.error(err);
-    }
   };
 
   const getDate = (dateString) => {
